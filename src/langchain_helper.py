@@ -57,5 +57,5 @@ class QAChain:
 
 def get_qa_chain():
     vectordb = FAISS.load_local(vectordb_file_path, embeddings)
-        retriever = vectordb.as_retriever(search_kwargs={"k": 2})
+    retriever = vectordb.as_retriever(search_kwargs={"k": 2})
     return QAChain(retriever)
