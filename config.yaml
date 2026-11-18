@@ -1,0 +1,16 @@
+# Settings for the knowledge-base update pipeline (internship task 1).
+# Times are 24-hour HH:MM and must stay in quotes.
+update:
+  schedule_time: "02:00"
+  retry_delays_minutes: [15, 30, 60]
+
+maintenance_window:
+  start: "01:00"
+  end: "04:00"
+
+health_check:
+  rollback_window_minutes: 5
+
+quality_gate:
+  min_accuracy: 0.80
+  min_grounding: 0.90
